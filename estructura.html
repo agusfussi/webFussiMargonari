@@ -4,13 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Paso a paso del armado, componentes electrónicos y código fuente de Vision Guide.">
-  <title>Estructura y Código | Vision Guide</title>
+  <title>Vision Guide</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href="fotos/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="fotos/logo.png">
   <link rel="stylesheet" href="prism.css">
 </head>
 
@@ -18,132 +17,45 @@
   <header>
     <nav>
       <div class="logo">
-        <a href="index.html">
-          <img src="fotos/logo.png" id="logo" alt="Logo Vision Guide">
-          <span>Vision Guide</span>
-        </a>
+        <a href="index.html"><img src="fotos/logo.png" id="logo" alt="Vision Guide"></a>
       </div>
 
-      <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="objetivos.html">Objetivo</a></li>
-        <li><a href="estructura.html" class="active">Estructura</a></li>
-        <li><a href="modelo 3d.html">Modelo 3D</a></li>
-        <li><a href="aboutus.html">Sobre Nosotros</a></li>
-        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
-      </ul>
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+          <li><a href="objetivos.html">Objetivo</a></li>
+          <li><a href="estructura.html">Estructura</a></li>
+          <li><a href="modelo 3d.html">Modelo 3D</a></li>
+          <li><a href="aboutus.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
 
       <div id="main">
-        <button class="openbtn" onclick="openNav()" aria-label="Abrir menú">&#9776;</button>
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
       </div>
     </nav>
   </header>
 
-  <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeNav()"></div>
-  <div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Cerrar menú">&times;</a>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="objetivos.html">Objetivo</a></li>
-      <li><a href="estructura.html" class="active">Estructura</a></li>
-      <li><a href="modelo 3d.html">Modelo 3D</a></li>
-      <li><a href="aboutus.html">Sobre Nosotros</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+  <div class="titulo">
+    <h2>Paso a paso del armado</h2>
   </div>
 
-  <main>
-    <div class="titulo">
-      <span class="badge">Hardware &amp; Ensamblaje</span>
-      <h2>Paso a paso del armado</h2>
-      <h3>Proceso de construcción física e integración electrónica del prototipo</h3>
-    </div>
+  <div id="imagenes">
+    <img class="imagen" src="fotos/paso2.jpg" draggable="false" alt="Paso 1">
+    <img class="imagen" src="fotos/paso3.jpg" draggable="false" alt="Paso 2">
+    <img class="imagen" src="fotos/paso5.jpg" draggable="false" alt="Paso 3">
+    <img class="imagen" src="fotos/paso4.jpg" draggable="false" alt="Paso 4">
+  </div>
 
-    <section class="gallery-section">
-      <div id="imagenes">
-        <div class="step-card">
-          <img class="imagen" src="fotos/paso2.jpg" alt="Carcasa impresa en 3D" draggable="false">
-          <div class="step-caption">
-            <span>Paso 1</span>
-            <h4>Impresión del Frente 3D</h4>
-            <p>Pieza frontal impresa en 3D con cavidades a medida para los sensores ultrasónicos y cámara.</p>
-          </div>
-        </div>
+  <div class="titulo-seccion">
+    <h2>Código</h2>
+  </div>
 
-        <div class="step-card">
-          <img class="imagen" src="fotos/paso3.jpg" alt="Montaje de placa y correas" draggable="false">
-          <div class="step-caption">
-            <span>Paso 2</span>
-            <h4>Soporte y Sujeción</h4>
-            <p>Fijación de la placa Arduino UNO en la estructura posterior junto con las correas elásticas ajustables.</p>
-          </div>
-        </div>
-
-        <div class="step-card">
-          <img class="imagen" src="fotos/paso5.jpg" alt="Cableado interno de sensores" draggable="false">
-          <div class="step-caption">
-            <span>Paso 3</span>
-            <h4>Conexión y Cableado</h4>
-            <p>Interconexión de alimentación, pines Trigger/Echo de los sensores HC-SR04 y módulo ESP32-CAM.</p>
-          </div>
-        </div>
-
-        <div class="step-card">
-          <img class="imagen" src="fotos/paso4.jpg" alt="Módulo frontal ensamblado" draggable="false">
-          <div class="step-caption">
-            <span>Paso 4</span>
-            <h4>Ensamblado Final</h4>
-            <p>Módulo frontal cerrado con los sensores HC-SR04 y la cámara ESP32-CAM listos para operar.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="titulo" id="tit">
-      <span class="badge">Componentes Electrónicos</span>
-      <h2>Materiales</h2>
-      <h3>Hardware principal utilizado en Vision Guide</h3>
-    </div>
-
-    <section class="cont" id="expertos">
-      <div class="experts">
-        <div class="cont-expert">
-          <img src="fotos/esp32.png" alt="ESP-32 CAM" draggable="false">
-          <h3 class="n-expert">ESP32-CAM</h3>
-          <p class="expert-desc">Microcontrolador con conectividad Wi-Fi y cámara integrada para transmisión de video e identificación de objetos con IA.</p>
-        </div>
-
-        <div class="cont-expert">
-          <img src="fotos/arduino.png" alt="Arduino UNO R3" draggable="false">
-          <h3 class="n-expert">Arduino UNO R3</h3>
-          <p class="expert-desc">Placa microcontroladora encargada de gestionar la lectura de los sensores ultrasónicos y lógica de control.</p>
-        </div>
-
-        <div class="cont-expert">
-          <img src="fotos/sensor.png" alt="Sensor ultrasónico HC-SR04" draggable="false">
-          <h3 class="n-expert">HC-SR04</h3>
-          <p class="expert-desc">Sensores ultrasónicos de distancia que detectan obstáculos a la izquierda, derecha o al frente en tiempo real.</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="titulo" id="titulo">
-      <span class="badge">Software &amp; Firmware</span>
-      <h2>Código Fuente</h2>
-      <h3>Lógica de microcontrolador (C++ / Arduino) y visión artificial con OpenCV + Firebase (Python)</h3>
-    </div>
-
-    <section class="codigo">
-      <div class="container">
-        <div class="code-header">
-          <div class="code-title">
-            <div class="code-dots"><span></span><span></span><span></span></div>
-            <span>firmware_esp32_ultrasonico.ino (Arduino / C++)</span>
-          </div>
-          <button class="copy-btn" onclick="copyCode(this, 'code-arduino')">Copiar código</button>
-        </div>
-        <div class="code-wrapper">
-          <pre><code id="code-arduino" class="language-clike">#include &lt;Arduino.h&gt;
+  <div class="codigo">
+    <div class="container">
+      <div class="code-wrapper">
+        <pre><code id="code-arduino" class="language-clike">#include &lt;Arduino.h&gt;
 #include &lt;WiFi.h&gt;
 #include &lt;Firebase_ESP_Client.h&gt;
 #include &lt;Wire.h&gt;
@@ -152,27 +64,36 @@
 #include "addons/TokenHelper.h"
 #include "addons/RTDBHelper.h"
 
-// Credenciales WiFi
-#define WIFI_SSID "TU_WIFI_SSID"
-#define WIFI_PASSWORD "TU_WIFI_PASSWORD"
+// Define the WiFi credentials
+#define WIFI_SSID ""
+#define WIFI_PASSWORD ""
 
-// Configuración del proyecto Firebase
-#define API_KEY "TU_FIREBASE_API_KEY"
+// Define the Firebase project API Key
+#define API_KEY "TU_API_KEY"
+
+// Define RTDB URL
 #define DATABASE_URL "https://mandar-notificacion-default-rtdb.firebaseio.com/"
 
+// Define Firebase objects
 FirebaseData fbdo;
 FirebaseAuth auth;
 FirebaseConfig config;
 
+// Variable to save USER UID
 String uid;
+
+// Database main path (to be updated in setup with the user UID)
 String databasePath;
-String distancePath = "/distancia";
+String distancePath = "/distancia";  // Define the path to store distance data
+
+// Parent Node (to be updated in every loop)
 String parentPath;
 
 esp32cam::Resolution initialResolution;
+
 WebServer server(80);
 
-// Pines de los sensores HC-SR04
+// Sensor pins
 const int triggerPin1 = 4;
 const int echoPin1 = 2;
 const int triggerPin2 = 14;
@@ -181,25 +102,31 @@ const int echoPin2 = 15;
 const int umbral = 12;
 const int distanciaMaxima = 200;
 
+// Timer variables (send new readings every three minutes)
 unsigned long sendDataPrevMillis = 0;
-unsigned long timerDelay = 3000;
+unsigned long timerDelay = 3000;  
 bool signupOK = false;
+int count = 0;
 
 // Función para medir la distancia usando HC-SR04
 float medirDistancia(int triggerPin, int echoPin) {
+  // Establece el pin TRIGGER como salida
   pinMode(triggerPin, OUTPUT);
   digitalWrite(triggerPin, LOW);
   delayMicroseconds(2);
 
+  // Genera un pulso corto en el pin TRIGGER
   digitalWrite(triggerPin, HIGH);
   delayMicroseconds(10);
   digitalWrite(triggerPin, LOW);
 
+  // Lee la duración del pulso en el pin ECHO
   pinMode(echoPin, INPUT);
   long duracion = pulseIn(echoPin, HIGH);
 
-  // Calcula la distancia en centímetros
-  float distancia = (duracion / 2.0) * 0.0343;
+  // Calcula la distancia en centímetros (usando la velocidad del sonido en el aire)
+  float distancia = (duracion / 2) * 0.0343;  // Dividido por 2 porque el pulso va de ida y vuelta
+
   return distancia;
 }
 
@@ -218,6 +145,7 @@ void setup() {
 
   {
     using namespace esp32cam;
+
     initialResolution = Resolution::find(1024, 768);
 
     Config cfg;
@@ -237,17 +165,30 @@ void setup() {
   Serial.println("Conectado a WiFi");
   Serial.println(WiFi.localIP());
 
+  // Inicializa la conexión WiFi
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+  Serial.print("Conectando a WiFi");
+  while (WiFi.status() != WL_CONNECTED) {
+    Serial.print(".");
+    delay(300);
+  }
+
+  /* Assign the api key (required) */
   config.api_key = API_KEY;
+
+  /* Assign the RTDB URL (required) */
   config.database_url = DATABASE_URL;
 
-  if (Firebase.signUp(&amp;config, &amp;auth, "", "")) {
-    Serial.println("Firebase Auth OK");
+  if (Firebase.signUp(&amp;config, &amp;auth, "", "")){
+    Serial.println("ok");
     signupOK = true;
-  } else {
+  }
+  else{
     Serial.printf("%s\n", config.signer.signupError.message.c_str());
   }
 
-  config.token_status_callback = tokenStatusCallback;
+  config.token_status_callback = tokenStatusCallback; //see addons/TokenHelper.h
+
   Firebase.begin(&amp;config, &amp;auth);
   Firebase.reconnectWiFi(true);
   addRequestHandlers();
@@ -255,23 +196,24 @@ void setup() {
 }
 
 void loop() {
-  if (Firebase.ready() &amp;&amp; signupOK &amp;&amp; (millis() - sendDataPrevMillis &gt; 5000 || sendDataPrevMillis == 0)) {
+  // Envía nuevas lecturas de distancia a la base de datos
+  if (Firebase.ready() &amp;&amp; signupOK &amp;&amp; (millis() - sendDataPrevMillis > 5000 || sendDataPrevMillis == 0)){
     sendDataPrevMillis = millis();
 
     // Medir distancias con sensores HC-SR04
     float distancia1 = medirDistancia(triggerPin1, echoPin1);
     float distancia2 = medirDistancia(triggerPin2, echoPin2);
 
-    // Comparar distancias y detectar ubicación del obstáculo
+    // Comparar distancias y detectar objetos
     String estadoObjeto;
-    if (distancia1 &gt; distanciaMaxima &amp;&amp; distancia2 &gt; distanciaMaxima) {
+    if (distancia1 > distanciaMaxima &amp;&amp; distancia2 > distanciaMaxima) {
       estadoObjeto = "Ningún objeto detectado";
-    } else if (distancia1 - distancia2 &gt; umbral) {
+    } else if (distancia1 - distancia2 > umbral) {
       estadoObjeto = "Objeto a la izquierda";
-    } else if (distancia2 - distancia1 &gt; umbral) {
+    } else if (distancia2 - distancia1 > umbral) {
       estadoObjeto = "Objeto a la derecha";
     } else {
-      float distanciaPromedio = (distancia1 + distancia2) / 2.0;
+      float distanciaPromedio = (distancia1 + distancia2) / 2;
       estadoObjeto = "Objeto en el medio a una distancia de " + String(distanciaPromedio) + " cm";
     }
 
@@ -283,40 +225,36 @@ void loop() {
     server.handleClient();
   }
 }</code></pre>
-        </div>
       </div>
+    </div>
 
-      <div class="container">
-        <div class="code-header">
-          <div class="code-title">
-            <div class="code-dots"><span></span><span></span><span></span></div>
-            <span>detector_objetos.py (Python / OpenCV)</span>
-          </div>
-          <button class="copy-btn" onclick="copyCode(this, 'code-python')">Copiar código</button>
-        </div>
-        <div class="code-wrapper">
-          <pre><code id="code-python" class="language-python">import cv2  # OpenCV
-import urllib.request  # Para abrir y leer el stream IP
+    <div class="container">
+      <div class="code-wrapper">
+        <pre><code id="code-python" class="language-python">import cv2 #opencv
+import urllib.request #para abrir y leer URL
 import numpy as np
-import firebase_admin
+import firebase_admin 
 from firebase_admin import credentials
 from firebase_admin import db
 
-# CONEXIÓN A LA BASE DE DATOS FIREBASE
-# Configuración de las credenciales de servicio de Firebase
+#CONEXIÓN A LA BASE DE DATOS FIREBASE
+
+# Configuración de las credenciales de Firebase 
 firebase_cred = {
-    "type": "service_account",
-    "project_id": "mandar-notificacion",
-    "private_key_id": "TU_PRIVATE_KEY_ID",
-    "private_key": "-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n",
-    "client_email": "firebase-adminsdk@mandar-notificacion.iam.gserviceaccount.com",
-    "client_id": "110485824900783183320",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "universe_domain": "googleapis.com"
+  "type": "service_account",
+  "project_id": "mandar-notificacion",
+  "private_key_id": "TU_PRIVATE_KEY_ID",
+  "private_key": "-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-royll@mandar-notificacion.iam.gserviceaccount.com",
+  "client_id": "110485824900783183320",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-royll%40mandar-notificacion.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
 }
 
+# Configura las credenciales de Firebase 
 cred = credentials.Certificate(firebase_cred)
 
 # Inicializa la base de datos de Firebase
@@ -326,28 +264,30 @@ firebase_admin.initialize_app(cred, {
 
 firebase_db = db.reference()
 
-# PROGRAMA DE CLASIFICACIÓN DE OBJETOS PARA VIDEO EN DIRECCIÓN IP
+#PROGRAMA DE CLASIFICACION DE OBJETOS PARA VIDEO EN DIRECCION IP 
+
 url = 'http://192.168.2.115/800x600.jpg'
 
+classNames = []
 classFile = 'coco.names'
-with open(classFile, 'rt') as f:
+with open(classFile,'rt') as f:
     classNames = f.read().rstrip('\n').split('\n')
 
 configPath = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
 weightsPath = 'frozen_inference_graph.pb'
 
-net = cv2.dnn_DetectionModel(weightsPath, configPath)
-net.setInputSize(320, 320)
-net.setInputScale(1.0 / 127.5)
+net = cv2.dnn_DetectionModel(weightsPath,configPath)
+net.setInputSize(320,320)
+net.setInputScale(1.0/127.5)
 net.setInputMean((127.5, 127.5, 127.5))
 net.setInputSwapRB(True)
 
-while True:
-    imgResponse = urllib.request.urlopen(url)
-    imgNp = np.array(bytearray(imgResponse.read()), dtype=np.uint8)
-    img = cv2.imdecode(imgNp, -1)
+while(1):
+    imgResponse = urllib.request.urlopen (url) #abrimos el URL
+    imgNp = np.array(bytearray(imgResponse.read()),dtype=np.uint8)
+    img = cv2.imdecode (imgNp,-1) #decodificamos
 
-    img = cv2.rotate(img, cv2.ROTATE_90_CLOCKWISE)
+    img = cv2.rotate(img, cv2.ROTATE_90_CLOCKWISE) # vertical
 
     classIds, confs, bbox = net.detect(img, confThreshold=0.5)
 
@@ -356,42 +296,47 @@ while True:
             className = classNames[classId - 1]
             print(f'Objeto detectado: {className}')
 
-            # Enviar los datos de detección de objetos a Firebase
+            # Crear un diccionario con los datos de detección de objetos
             detection_data = {
                 "object_name": className,
             }
+
+            # Enviar los datos de detección de objetos a Firebase
             firebase_db.child('detections').set(detection_data)
 
-    # Presionar ESC para terminar el programa
+    #esperamos a que se presione ESC para terminar el programa
     tecla = cv2.waitKey(5) &amp; 0xFF
     if tecla == 27:
         break
-
 cv2.destroyAllWindows()
 firebase_admin.delete_app(firebase_admin.get_app())</code></pre>
-        </div>
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-brand">
-        <img src="fotos/logo.png" alt="Vision Guide">
-        <span>Vision Guide &copy; 2023 &ndash; Augusto Margonari &amp; Agustín Fussi</span>
-      </div>
-      <ul class="footer-links">
-        <li><a href="objetivos.html">Objetivo</a></li>
-        <li><a href="estructura.html">Estructura</a></li>
-        <li><a href="modelo 3d.html">Modelo 3D</a></li>
-        <li><a href="aboutus.html">Sobre Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
     </div>
-  </footer>
+  </div>
 
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <div class="titulo-seccion">
+    <h2>Materiales</h2>
+  </div>
+
+  <div class="cont" id="expertos">
+    <div class="experts">
+      <div class="cont-expert">
+        <img src="fotos/esp32.png" draggable="false" alt="ESP-32 CAM">
+        <h3 class="n-expert">ESP-32 CAM</h3>
+      </div>
+      <div class="cont-expert">
+        <img src="fotos/arduino.png" draggable="false" alt="Arduino UNO R3">
+        <h3 class="n-expert">Arduino UNO R3</h3>
+      </div>
+      <div class="cont-expert">
+        <img src="fotos/sensor.png" draggable="false" alt="HC-SR 04">
+        <h3 class="n-expert">HC-SR 04</h3>
+      </div>
+    </div>
+  </div>
+
   <script src="prism.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="script.js"></script>
 </body>
 

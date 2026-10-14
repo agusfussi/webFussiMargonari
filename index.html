@@ -5,118 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vision Guide - Lentes inteligentes de asistencia para personas no videntes o con disminución visual. Proyecto Expo Bienal San José 2023.">
-    <title>Vision Guide | Una nueva forma de ver</title>
+    <title>Vision Guide</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="fotos/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="fotos/logo.png">
 </head>
 
 <body>
+
     <header>
         <nav>
             <div class="logo">
-                <a href="index.html">
-                    <img src="fotos/logo.png" id="logo" alt="Logo Vision Guide">
-                    <span>Vision Guide</span>
-                </a>
+                <a href="index.html"><img src="fotos/logo.png" id="logo" alt="Vision Guide"></a>
             </div>
 
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="objetivos.html">Objetivo</a></li>
-                <li><a href="estructura.html">Estructura</a></li>
-                <li><a href="modelo 3d.html">Modelo 3D</a></li>
-                <li><a href="aboutus.html">Sobre Nosotros</a></li>
-                <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
-            </ul>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul>
+                    <li><a href="objetivos.html">Objetivo</a></li>
+                    <li><a href="estructura.html">Estructura</a></li>
+                    <li><a href="modelo 3d.html">Modelo 3D</a></li>
+                    <li><a href="aboutus.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
 
             <div id="main">
-                <button class="openbtn" onclick="openNav()" aria-label="Abrir menú">&#9776;</button>
+                <button class="openbtn" onclick="openNav()">&#9776;</button>
             </div>
         </nav>
     </header>
 
-    <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeNav()"></div>
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Cerrar menú">&times;</a>
-        <ul>
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="objetivos.html">Objetivo</a></li>
-            <li><a href="estructura.html">Estructura</a></li>
-            <li><a href="modelo 3d.html">Modelo 3D</a></li>
-            <li><a href="aboutus.html">Sobre Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </div>
+    <div class="leyenda">
+        <div class="home">
+            <h2>BIENVENIDOS AL FUTURO</h2>
 
-    <main>
-        <section class="leyenda">
-            <div class="home">
-                <span class="badge">Expo Bienal San José 2023</span>
-                <h2>BIENVENIDOS AL FUTURO</h2>
-                <h1>VISION GUIDE</h1>
-                <h3>Una nueva forma de ver &mdash; Nosotros te guiamos</h3>
-                <p>
-                    Lentes inteligentes diseñados para asistir a personas no videntes o con disminución visual,
-                    combinando sensores ultrasónicos, visión artificial con ESP32-CAM y alertas en tiempo real.
-                </p>
-                <div class="hero-actions">
-                    <a href="objetivos.html" class="btn btn-primary">Conocer el Proyecto</a>
-                    <a href="estructura.html" class="btn btn-secondary">Ver Estructura y Código</a>
-                </div>
-            </div>
+            <h1>VISION GUIDE</h1>
 
-            <div class="hero-visual">
-                <img class="icono" src="fotos/modelo.png" alt="Dispositivo Vision Guide">
-            </div>
-        </section>
-
-        <section class="section-container">
-            <div class="titulo" style="margin-top: 0;">
-                <h2>¿Cómo funciona Vision Guide?</h2>
-                <p>Tecnología accesible pensada para brindar autonomía y seguridad al caminar</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📡</div>
-                    <h3>Detección Ultrasónica</h3>
-                    <p>Sensores HC-SR04 miden constantemente la distancia frontal y lateral para detectar obstáculos en centímetros con alta precisión.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">👁️</div>
-                    <h3>Visión Artificial con IA</h3>
-                    <p>El módulo ESP32-CAM captura video en tiempo real procesado con OpenCV (MobileNet SSD) para identificar qué objeto se encuentra en el camino.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Alertas en Tiempo Real</h3>
-                    <p>A través de Firebase Realtime Database, el sistema envía notificaciones inmediatas a la aplicación móvil indicando ubicación y tipo de obstáculo.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <img src="fotos/logo.png" alt="Vision Guide">
-                <span>Vision Guide &copy; 2023 &ndash; Augusto Margonari &amp; Agustín Fussi</span>
-            </div>
-            <ul class="footer-links">
-                <li><a href="objetivos.html">Objetivo</a></li>
-                <li><a href="estructura.html">Estructura</a></li>
-                <li><a href="modelo 3d.html">Modelo 3D</a></li>
-                <li><a href="aboutus.html">Sobre Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+            <h3>Una nueva forma de ver</h3>
         </div>
-    </footer>
+
+        <img class="icono" src="fotos/d_nq_np_682197-mla52961270311_122022-o.webp" alt="Vision Guide">
+    </div>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
