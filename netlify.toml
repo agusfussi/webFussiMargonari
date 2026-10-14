@@ -1,0 +1,32 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/Objetivos.html"
+  to = "/objetivos.html"
+  status = 301
+
+[[redirects]]
+  from = "/Estructura.html"
+  to = "/estructura.html"
+  status = 301
+
+[[redirects]]
+  from = "/Modelo 3D.html"
+  to = "/modelo 3d.html"
+  status = 301
+
+[[redirects]]
+  from = "/AboutUs.html"
+  to = "/aboutus.html"
+  status = 301
+
+[[redirects]]
+  from = "/Contacto.html"
+  to = "/contacto.html"
+  status = 301
+
+[[redirects]]
+  from = "/Fotos/*"
+  to = "/fotos/:splat"
+  status = 301

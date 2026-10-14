@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Misión, visión y objetivos de Vision Guide, proyecto expuesto en la Expo Bienal San José 2023.">
+    <title>Objetivo | Vision Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" type="image/png" href="fotos/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="fotos/logo.png" id="logo" alt="Logo Vision Guide">
+                    <span>Vision Guide</span>
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="objetivos.html" class="active">Objetivo</a></li>
+                <li><a href="estructura.html">Estructura</a></li>
+                <li><a href="modelo 3d.html">Modelo 3D</a></li>
+                <li><a href="aboutus.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+            </ul>
+
+            <div id="main">
+                <button class="openbtn" onclick="openNav()" aria-label="Abrir menú">&#9776;</button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeNav()"></div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Cerrar menú">&times;</a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="objetivos.html" class="active">Objetivo</a></li>
+            <li><a href="estructura.html">Estructura</a></li>
+            <li><a href="modelo 3d.html">Modelo 3D</a></li>
+            <li><a href="aboutus.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="titulo">
+            <span class="badge">Propósito del Proyecto</span>
+            <h2>MISIÓN Y VISIÓN</h2>
+            <h3>Descripción y objetivo de nuestro proyecto</h3>
+        </div>
+
+        <div class="objetivos-wrapper">
+            <div class="texto">
+                <div class="info-card">
+                    <h4>Nuestro proyecto consiste en lentes inteligentes que ayudan a personas no videntes o con disminución visual en la identificación de objetos que puedan estar en su camino y representen un obstáculo.</h4>
+                </div>
+                <div class="info-card">
+                    <h4>Cuando los sensores ultrasónicos y la cámara detectan un objeto, el sistema envía una notificación en tiempo real hacia la aplicación móvil para advertir sobre el obstáculo y permitir esquivarlo a tiempo.</h4>
+                </div>
+                <div class="info-card">
+                    <h4>Comprendemos los desafíos diarios al desplazarse; por eso, aplicamos la tecnología actual para brindar la ubicación exacta del obstáculo, mejorando la seguridad y la confianza al caminar.</h4>
+                </div>
+                <div class="info-card">
+                    <h4>Este proyecto tuvo presencia en la <strong>Expo Bienal del Instituto San José 2023</strong>, siendo expuesto y demostrado en vivo por sus autores.</h4>
+                </div>
+            </div>
+
+            <div class="contenedor1">
+                <div class="nos1">
+                    <img src="fotos/bienal2023.jpg" alt="Presentación en Expo Bienal 2023" draggable="false">
+                    <div class="nombre">Expo Bienal 2023</div>
+                    <div class="subnombre">Casa Salesiana San José &ndash; Rosario</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="fotos/logo.png" alt="Vision Guide">
+                <span>Vision Guide &copy; 2023 &ndash; Augusto Margonari &amp; Agustín Fussi</span>
+            </div>
+            <ul class="footer-links">
+                <li><a href="objetivos.html">Objetivo</a></li>
+                <li><a href="estructura.html">Estructura</a></li>
+                <li><a href="modelo 3d.html">Modelo 3D</a></li>
+                <li><a href="aboutus.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
